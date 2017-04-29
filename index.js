@@ -57,9 +57,9 @@ function processTweet(tweet) {
     console.log('no new tweets')
   } else {
     let text = await processTweet(currentTweet)
+    await client.post('statuses/update', {status: text})
     //note the tweet that was just processed so that it doesn't get processed again
     recordLastTweetId(currentTweet)
-    await client.post('statuses/update', {status: text})
   }
 }()
   .catch(console.error)
