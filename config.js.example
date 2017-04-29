@@ -13,6 +13,9 @@ module.exports = {
     [/Hillary\sClinton/gi, 'President Hillary'],
     [/Hillary/gi, 'PresHRC'],
     [/long/gi, 'short'],
-    [/fake/gi, 'real']
+    [/fake/gi, 'real'],
+    [/achievements/gi, 'tiny hands'],
+    [/great/gi, 'terrible'],
+    [/strong/gi, 'weak']
   ]
 }

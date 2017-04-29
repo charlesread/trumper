@@ -3,6 +3,7 @@
 require('require-self-ref')
 
 const fs = require('fs')
+const path = require('path')
 const decode = require('decode-html')
 const Twitter = require('twitter')
 
@@ -17,12 +18,12 @@ try {
 const client = new Twitter(config.twitter)
 
 function recordLastTweetId(tweet) {
-  fs.writeFileSync('./lastTweetId.txt', tweet.id)
+  fs.writeFileSync(path.join(__dirname, 'lastTweetId.txt'), tweet.id)
   return Promise.resolve()
 }
 
 function getLastTweetId() {
-  return Promise.resolve(fs.readFileSync('./lastTweetId.txt').toString())
+  return Promise.resolve(fs.readFileSync(path.join(__dirname, 'lastTweetId.txt')).toString())
 }
 
 function processTweet(tweet) {
