@@ -2,7 +2,7 @@
 
 Who doesn't love Donald Trump?!  Let's make his tweets more accurate by making some corrections!
 
-This little Twitter "bot" finds Trump's latest tweet, changes a few things around, and posts it to the Twitter account of your choice! (currently @realD0naldTroll).
+This little Twitter "bot" finds Trump's latest tweet, changes a few things around, and posts it to the Twitter account of your choice! (currently @realD0naldTr0ll).
 
 # Installation
 
