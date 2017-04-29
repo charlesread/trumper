@@ -1,0 +1,18 @@
+'use strict'
+
+module.exports = {
+  twitter: {
+    consumer_key: '',
+    consumer_secret: '',
+    access_token_key: '',
+    access_token_secret: ''
+  },
+  replacements: [
+    [/\sI\s/g, " Me "],
+    [/I\s/g, "Me "],
+    [/Hillary\sClinton/gi, 'President Hillary'],
+    [/Hillary/gi, 'PresHRC'],
+    [/long/gi, 'short'],
+    [/fake/gi, 'real']
+  ]
+}

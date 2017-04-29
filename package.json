@@ -1,0 +1,16 @@
+{
+  "name": "trumper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "decode-html": "^1.0.2",
+    "require-self-ref": "^2.0.1",
+    "twitter": "^1.7.0"
+  }
+}
