@@ -6,6 +6,8 @@ This little Twitter "bot" finds Trump's latest tweet, changes a few things aroun
 
 # Installation
 
+*Note: this app does use `async/await`, so use a `node` with `async/await`, I am using `7.9.0`*
+
 `git clone <repo>`
 
 `cd trumper`
