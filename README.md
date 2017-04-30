@@ -20,7 +20,7 @@ This little Twitter "bot" finds Trump's latest tweet, changes a few things aroun
 
 Run `index.js` as much as you like, I have it running every minute via `cron`.
 
-Replacements are made according to the [`Regex`, `String`] arrays in `config.js`.
+Replacements are made according to the [`Regex`, `String`] arrays in `lib/replacements.js`.
 
 Have fun!
 
