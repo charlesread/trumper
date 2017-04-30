@@ -57,6 +57,7 @@ function processTweet(tweet) {
 }
 
 !async function () {
+  console.log('\n-- %s --', new Date())
   //get tweets
   let tweets = await client.get('statuses/user_timeline', {screen_name: 'realDonaldTrump', tweet_mode: 'extended'})
   //filter out retweets and get most recent tweet

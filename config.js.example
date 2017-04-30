@@ -22,6 +22,19 @@ module.exports = {
     [/putin/gi, 'Putin<3'],
     [/Melania/gi, 'Wife#3'],
     [/\sNRA\s/g, ' TSA '],
-    [/democrats/gi, 'adults']
+    [/democrats/gi, 'adults'],
+    [/without/gi, 'w/o'],
+    [/with/gi, 'w/'],
+    [/\sfor\s/gi, ' 4 '],
+    [/\sto\s/gi, ' 2 '],
+    [/really/gi, 'rly'],
+    [/before/gi, 'b4'],
+    [/u\.s\./gi, 'US'],
+    [/u\.s\.a\./gi, 'USA'],
+    [/\sand\s/gi, ' & '],
+    [/china/gi, 'Jina'],
+    [/fantastic/gi, 'mediocre'],
+    [/\sthe\s/gi, ' da '],
+    [/!/g, '?']
   ]
 }
