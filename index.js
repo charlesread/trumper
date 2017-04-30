@@ -11,7 +11,7 @@ const hashtagTrump = ' #trump'
 const atRealDonaldTrump = ' @realDonaldTrump'
 
 let config
-const replacements = require('~/replacements')
+const replacements = require('~/lib/replacements')
 
 try {
   config = require('~/config')
