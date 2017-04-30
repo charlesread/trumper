@@ -7,6 +7,9 @@ const path = require('path')
 const decode = require('decode-html')
 const Twitter = require('twitter')
 
+const hashtagTrump = ' #trump'
+const atRealDonaldTrump = ' @realDonaldTrump'
+
 let config
 
 try {
@@ -38,6 +41,16 @@ function processTweet(tweet) {
   for (let replacement of config.replacements) {
     newText = newText.replace(replacement[0], replacement[1])
   }
+
+  //add tags if we can
+  if ((newText + atRealDonaldTrump + hashtagTrump).length <= 140) {
+    newText = newText + atRealDonaldTrump + hashtagTrump
+  } else if ((newText + atRealDonaldTrump).length <= 140) {
+    newText = newText + atRealDonaldTrump
+  } else if ((newText + hashtagTrump).length <= 140) {
+    newText = newText + hashtagTrump
+  }
+
   console.log('O: %s', originalText)
   console.log('N: %s', newText)
   return Promise.resolve(newText)
