@@ -6,35 +6,5 @@ module.exports = {
     consumer_secret: '',
     access_token_key: '',
     access_token_secret: ''
-  },
-  replacements: [
-    [/\sI\s/g, " Me "],
-    [/I\s/g, "Me "],
-    [/Hillary\sClinton/gi, 'President Hillary'],
-    [/Hillary/gi, 'PresHRC'],
-    [/long/gi, 'short'],
-    [/fake/gi, 'real'],
-    [/achievements/gi, 'tiny hands'],
-    [/great/gi, 'terrible'],
-    [/strong/gi, 'weak'],
-    [/big/gi, 'tiny'],
-    [/sad/gi, 'rad'],
-    [/putin/gi, 'Putin<3'],
-    [/Melania/gi, 'Wife#3'],
-    [/\sNRA\s/g, ' TSA '],
-    [/democrats/gi, 'adults'],
-    [/without/gi, 'w/o'],
-    [/with/gi, 'w/'],
-    [/\sfor\s/gi, ' 4 '],
-    [/\sto\s/gi, ' 2 '],
-    [/really/gi, 'rly'],
-    [/before/gi, 'b4'],
-    [/u\.s\./gi, 'US'],
-    [/u\.s\.a\./gi, 'USA'],
-    [/\sand\s/gi, ' & '],
-    [/china/gi, 'Jina'],
-    [/fantastic/gi, 'mediocre'],
-    [/\sthe\s/gi, ' da '],
-    [/!/g, '?']
-  ]
+  }
 }

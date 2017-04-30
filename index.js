@@ -11,6 +11,7 @@ const hashtagTrump = ' #trump'
 const atRealDonaldTrump = ' @realDonaldTrump'
 
 let config
+const replacements = require('~/replacements')
 
 try {
   config = require('~/config')
@@ -38,7 +39,7 @@ function processTweet(tweet) {
     newText = newText.substring(0, newText.lastIndexOf(" "))
   }
   //process replacements
-  for (let replacement of config.replacements) {
+  for (let replacement of replacements) {
     newText = newText.replace(replacement[0], replacement[1])
   }
 
