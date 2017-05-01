@@ -27,7 +27,7 @@ function recordLastTweetId(tweet) {
 }
 
 function getLastTweetId() {
-  return Promise.resolve(fs.readFileSync(path.join(__dirname, 'lastTweetId.txt')).toString())
+  return Promise.resolve(parseInt(fs.readFileSync(path.join(__dirname, 'lastTweetId.txt')).toString()))
 }
 
 function processTweet(tweet) {
@@ -69,7 +69,7 @@ function processTweet(tweet) {
   let currentTweet = tweets[0]
   let currentTweetId = currentTweet.id
   let lastTweetId = await getLastTweetId()
-  if (currentTweetId == lastTweetId) {
+  if (currentTweetId === lastTweetId) {
     console.log('no new tweets')
   } else {
     let text = await processTweet(currentTweet)
