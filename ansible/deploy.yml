@@ -1,0 +1,27 @@
+- hosts: "apps"
+  vars:
+    app: "trumper"
+    repo: "git@github.com:charlesread/trumper.git"
+    app_root: "/home/node/apps/{{app}}"
+  pre_tasks:
+    - name: get node password
+      command: cat /home/node/.passwd
+      register: node_password
+    - debug: var=ansible_become_pass
+    - set_fact:
+        ansible_become_pass: "{{node_password.stdout}}"
+    - debug: var=ansible_become_pass
+  become_user: node
+  become_method: su
+  tasks:
+  - name: clone repo
+    become: true
+    git:
+      accept_hostkey: yes
+      repo: "{{repo}}"
+      dest: "{{app_root}}"
+#  - name: npm install
+#    become: yes
+#    command: "/home/node/.nvm/versions/node/v7.9.0/bin/npm install --production"
+#    args:
+#      chdir: "{{app_root}}"
