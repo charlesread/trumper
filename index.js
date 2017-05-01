@@ -63,8 +63,9 @@ function processTweet(tweet) {
   let tweets = await client.get('statuses/user_timeline', {screen_name: 'realDonaldTrump', tweet_mode: 'extended'})
   //filter out retweets and get most recent tweet
   tweets = tweets.filter((tweet) => {
-    return tweet.retweeted_status ? false : true
+    return !tweet.retweeted_status
   })
+
   let currentTweet = tweets[0]
   let currentTweetId = currentTweet.id
   let lastTweetId = await getLastTweetId()
